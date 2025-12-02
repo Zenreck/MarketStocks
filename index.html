@@ -1,24 +1,14 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <title>Rolimons embed (restricted)</title>
+  <meta charset="UTF-8">
+  <title>Rolimons Embed</title>
   <style>
-    html,body{height:100%;margin:0}
-    .frame-wrap{height:100vh;display:flex;flex-direction:column}
-    header{background:#111;color:#fff;padding:10px;font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif}
-    iframe{flex:1;border:0;width:100%}
+    body,html{margin:0;height:100%}
+    iframe{width:100%;height:100%;border:0}
   </style>
 </head>
 <body>
-  <div class="frame-wrap">
-    <header>
-      <strong>Rolimons (embedded, links restricted)</strong>
-      — Allowed: only <code>/itemsale/&lt;digits&gt;</code>. Other links → Error contact support.
-    </header>
-
-    <!-- iframe loads the proxy'd marketactivity page from this server -->
-    <iframe id="roliframe" src="/marketactivity" sandbox="allow-scripts allow-forms allow-same-origin"></iframe>
-  </div>
+  <iframe src="/api/proxy?path=marketactivity"></iframe>
 </body>
 </html>
